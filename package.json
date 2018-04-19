@@ -10,17 +10,26 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,json,css,md}": ["prettier --write", "git add"]
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cookie-session": "^2.0.0-beta.3",
     "express": "4.16.3",
     "husky": "0.14.3",
     "lint-staged": "7.0.4",
+    "mongoose": "^5.0.13",
+    "nodemon": "^1.17.3",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0",
     "prettier": "1.11.1"
   },
   "devDependencies": {
